@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+    <head lang="pt">
+        <meta charset="UTF-8">
+        <title>Consumos Nocivos</title>
+        <link rel="stylesheet" href="css/animate.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery.color-2.1.2.min.js"></script>
+        <script src="js/getTemas.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/detalheVideo.js"></script>
+        <script src="js/glossario.js"></script>
+        <script src="js/wow.js"></script>
+        <script src="js/cookiesTemas.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script>
+            new WOW().init();
+        </script>
+    </head>
+
+    <body class="paginaTema consumos">
+        <div class="zonaMenu">
+            <nav class="navbar">
+                <a class="logo" href="index.html">YourPEL</a>
+                <ul class="topicosMenu">
+                    <li><a href="destaques.html">Destaques</a></li>
+                    <li class="dropdownMenu selected"><a>Temas<button class="setaTemasMenu" style="background-image: url('imagens/arrowmenu_mod_3.png')"></button></a>
+                        <div class="helper"></div>
+                        <div class="triangulo"></div>
+                        <div class="dropdown">
+                            <div class="submenus">
+                                <a href="alimentacao.html">Alimentação</a>
+                                <a href="sexualidade.html">Sexualidade</a>
+                                <a href="substancias.html">Consumos Nocivos</a>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="parceiros.html">Parceiros</a></li>
+                    <li><a href="divulgacao.html">Divulgação</a></li>
+                </ul>
+                <a href="forum.html"><input type="button" class="active" value="Fórum"></a>
+            </nav>
+            <div class="navbar-mobile mobile">
+                <a class="logo" href="index.html">YourPEL</a>
+                <button class="botao-mobile">☰</button>
+                <div class="clear"></div>
+            </div>
+            <nav class="menu-mobile mobile">
+                <div class="topicosMenu">
+                    <div class="menu-contentor">
+                        <button>x</button>
+                        <a href="destaques.html">Destaques</a>
+                        <a class="temas" href="alimentacao.html">Alimentação</a>
+                        <a class="temas" href="sexualidade.html">Sexualidade</a>
+                        <a class="temas" href="substancias.html">Consumos Nocivos</a>
+                        <a href="sobre.html">Sobre</a>
+                        <a href="parceiros.html">Parceiros</a>
+                        <a href="divulgacao.html">Divulgação</a>
+                        <a href="forum.html">Fórum</a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="tituloZonaConteudo">
+                <p class="destaquesTitulo">Consumos Nocivos</p>
+                <p class="aqui-podes-encontrar">Aqui podes encontrar publicações sobre tudo o que <mark>precisas de saber</mark> sobre substâncias nocivas</p>
+            </div>
+
+            <div id="zonaConteudo">
+                <div class="conteudo">
+                    <div class="col1">
+                        <div class="bloco-1 texto wow fadeInDown">
+                            <p><mark>Artigos sobre</mark> todas as tuas questões</p>
+                        </div>
+                    </div>
+                  
+                    <div class="col2">
+                    </div>
+
+                    <div class="col3">
+                    </div>
+                    <div class="clear"></div>
+                    <a class="wow fadeIn hvr-grow carregarMais">Carregar mais</a>
+                </div>
+              
+                <div id="zonaDeVideos">
+                    <p class="titulo wow fadeInDown"><mark>Vídeos educativos</mark> para atitudes consicientes e responsáveis</p>
+                    <div class="listaVideos">
+
+                    </div>
+                    <div class="clear"></div>
+                    <a class="wow fadeIn hvr-grow carregarMais">Carregar mais</a>
+                </div>
+
+                <div id="zonaGlossario">
+                    <p class="titulo wow fadeInDown">Glossário de consumos nocivos</p>
+                    <p class="descricao wow fadeIn">Pesquisa aqui as palavras que não conheces ou então procura alfabeticamente no glossário</p>
+                    <div id="glossario">
+                        <div class="zonaDefi" id="zonaDefi"></div>
+                        <ul class="abecedario" id="abecedario" onClick="mudarConteudo()">
+                            <div class="gradiente"></div>
+                            <li id="a" class="letra">A</li>
+                            <li id="b" class="letra">B</li>
+                            <li id="c" class="letra">C</li>
+                            <li id="d" class="letra">D</li>
+                            <li id="e" class="letra">E</li>
+                            <li id="f" class="letra">F</li>
+                            <li id="g" class="letra">G</li>
+                            <li id="h" class="letra">H</li>
+                            <li id="i" class="letra">I</li>
+                            <li id="j" class="letra">J</li>
+                            <li id="k" class="letra">K</li>
+                            <li id="l" class="letra">L</li>
+                            <li id="m" class="letra">M</li>
+                            <li id="n" class="letra">N</li>
+                            <li id="o" class="letra">O</li>
+                            <li id="p" class="letra">P</li>
+                            <li id="q" class="letra">Q</li>
+                            <li id="r" class="letra">R</li>
+                            <li id="s" class="letra">S</li>
+                            <li id="t" class="letra">T</li>
+                            <li id="u" class="letra">U</li>
+                            <li id="v" class="letra">V</li>
+                            <li id="w" class="letra">W</li>
+                            <li id="x" class="letra">X</li>
+                            <li id="y" class="letra">Y</li>
+                            <li id="z" class="letra">Z</li>
+                        </ul>
+                        <div class="clear"></div>
+                        <a id="direita" onclick="clickMudarPagina('direita')" style="display: none;"></a>
+                        <a id="esquerda" onclick="clickMudarPagina('esquerda')" style="display: none;"></a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div id="zonaLinks">
+                    <p class="titulo wow fadeInDown">Links Úteis</p>
+                </div>
+                <div class="clear"></div>
+
+                <div id="zonaDocumentos">
+                    <p class="titulo wow fadeInDown">Documentos Úteis</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <footer>
+            <div id="rodape">
+                <h1 id="logoRodape">YourPEL</h1>
+                <div id="icons">
+                    <p id="linhaIc">
+                        <a href="https://www.facebook.com/projetoyourpel/" target="_blank"><img id="facebookIcon" src="imagens/Rodape/facebook_icon.png" /></a>
+                        <a href="https://www.instagram.com/yourpel/" target="_blank"><img id="instagramIcon" src="imagens/Rodape/instagram_icon.png" /></a>
+                        <a href="https://www.youtube.com/channel/UCreEERg2Rs-FlDpCPxDyJGw" target="_blank"><img id="youtubeIcon" src="imagens/Rodape/youtube_icon.png" /></a>
+                    </p>
+                </div>
+                <div class="zonaGeral menu">
+                    <a href="index.html" class="estilo">Home</a>
+                    <br>
+                    <a href="destaques.html" class="estilo">Destaques </a>
+                    <br>
+                    <a href="sobre.html" class="estilo">Sobre </a>
+                    <br>
+                </div>
+
+                <div class="zonaGeral2 menu">
+                    <a href="parceiros.html" class="estilo">Parceiros</a>
+                    <br>
+                    <a href="divulgacao.html" class="estilo">Divulgação</a>
+                    <br>
+                    <a href="forum.html" class="estilo">Fórum</a>
+                    <br>
+                </div>
+
+                <div class="zonaArtigos menu">
+                    <a href="alimentacao.html" class="estilo">Alimentação</a>
+                    <br>
+                    <a href="sexualidade.html" class="estilo">Sexualidade</a>
+                    <br>
+                    <a href="substancias.html" class="estilo">Consumos nocivos</a>
+                    <br>
+                </div>
+
+                <div class="zonaContactos menu">
+                    <p class="styConta" style="color: #1070B0;">Contactos</p>
+                    <p class="styConta" style="color: #17A2FF;">+351 243 307 200</p>
+                    <p class="styConta" style="color: #17A2FF;">yourpel@essaude.ipsantarem.pt</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="zonaCopyrights">
+                <p class="copyrights">© 2018 IPSANTARÉM — Design by ESGTS</p>
+                <div id="icParceiros">
+                    <a href="http://www.poci-compete2020.pt/"><img id="comp" class="estilo parceiros" src="imagens/Rodape/comp2020.png"/></a>
+                    <a href="https://www.portugal2020.pt/"><img id="port" class="estilo parceiros" src="imagens/Rodape/port2020.png"/></a>
+                    <a href="https://europa.eu/european-union/index_pt"><img id="eu" class="estilo parceiros" src="imagens/Rodape/UE.png"/></a>
+                    <a href="https://www.fct.pt/"><img id="fct" class="estilo parceiros" src="imagens/Rodape/fct.png"/></a>
+                </div>
+            </div>
+        </footer>
+        <div id="zonavideoDetalhe" style="display: none;">
+            <div id="zonaVerVideo">
+                <div id="vistaVideo" class="video"></div>
+                <div id="info">
+                    <h1 id="tituloVideo">Título do vídeo</h1>
+                    <p id="descricaoVideo">Uma descrição decente</p>
+                    <div class="clear"></div>
+                </div>
+                <ul id="vistaPlaylist"></ul>
+                <div class="clear"></div>
+            </div>
+            <a id="fechar" onclick="fechar()"></a>
+        </div>
+    </body>
+</html>

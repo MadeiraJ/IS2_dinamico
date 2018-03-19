@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="pt">
+    <meta charset="UTF-8">
+    <title>Fórum Your PEL</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.color-2.1.2.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/recursosForumNovoTopico.js"></script>
+    <script src="js/cookiesGeral.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script>
+      new WOW().init();
+  </script>
+</head>
+<body class="paginaTema forum">
+    <div class="zonaMenu">
+        <nav class="navbar">
+            <a class="logo" href="index.html">YourPEL</a>
+            <ul class="topicosMenu">
+                <li><a href="destaques.html">Destaques</a></li>
+                <li class="dropdownMenu">
+                    Temas<button class="setaTemasMenu"></button>
+                    <div class="helper"></div>
+                    <div class="triangulo"></div>
+                    <div class="dropdown">
+                        <div class="submenus">
+                            <a href="alimentacao.html">Alimentação</a>
+                            <a href="sexualidade.html">Sexualidade</a>
+                            <a href="substancias.html">Consumos Nocivos</a>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="parceiros.html">Parceiros</a></li>
+                <li><a href="divulgacao.html">Divulgação</a></li>
+            </ul>
+            <a href="forum.html"><input type="button" class="active" value="Fórum"></a>
+        </nav>
+        <div class="navbar-mobile mobile">
+            <a class="logo" href="index.html">YourPEL</a>
+            <button class="botao-mobile">☰</button>
+            <div class="clear"></div>
+        </div>
+        <nav class="menu-mobile mobile">
+            <div class="topicosMenu">
+                <div class="menu-contentor">
+                    <button>x</button>
+                    <a href="destaques.html">Destaques</a>
+                    <a class="temas" href="alimentacao.html">Alimentação</a>
+                    <a class="temas" href="sexualidade.html">Sexualidade</a>
+                    <a class="temas" href="substancias.html">Consumos Nocivos</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="parceiros.html">Parceiros</a>
+                    <a href="divulgacao.html">Divulgação</a>
+                    <a href="forum.html">Fórum</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </nav>
+    </div>
+    <div class="main">
+        <div class="tituloZonaConteudo">
+            <p class="destaquesTitulo">Fórum</p>
+            <p class="aqui-podes-encontrar">Usa este espaço para <mark>esclarecer</mark> as tuas dúvidas e <mark>aprender mais</mark></p>
+        </div>
+        <div class="conteudo">
+            <p class="novoTopico">Criar um novo tópico</p>
+          <p class="tituloTopico">Tópico</p>
+                 <div class="div_tituloNovoTopico" >
+                     <input type="text" class="textoTituloNovoTopico" placeholder="Escreve um título para o tópico">
+                     <div class="clear"></div>
+                 </div>
+            <p class="tituloTopico">Que tipo de tópico é?</p>
+            <div class="div_escolhaTipoTopico" >
+                <div class="div_escolhaAlimentacao">
+                    <p class="textoEscolha" style="color: #FFBC42">Alimentação</p>
+                    <div class="round">
+                        <input type="checkbox" id="cbAlimentacao" checked/>
+                        <label for="cbAlimentacao"></label>
+                    </div>
+                </div>
+                <div class="div_escolhaConsumos">
+                    <p class="textoEscolha" style="color: #24D7B4">Consumos Nocivos</p>
+                    <div class="round">
+                        <input type="checkbox" id="cbConsumos" />
+                        <label for="cbConsumos" style="border: 3px solid #DBF8F3;" ></label>
+                    </div>
+                </div>
+                <div class="div_escolhaSexualidade">
+                    <p class="textoEscolha" style="color:#6355CD">Sexualidade</p>
+                    <div class="round">
+                        <input type="checkbox" id="cbSexualidade" />
+                        <label for="cbSexualidade" style="border: 3px solid #E8E6F8;"></label>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <p class="tituloTopico">Descrição</p>
+            <div class="div_descricaoNovoTopico" >
+                <div class="zonaTextoDescricao">
+                <textarea class="textoDescricao" placeholder="Escreve aqui o que te vai na mente…"></textarea>
+                    <div class="div_postarCancelar">
+                        <span class="cancelar">Cancelar</span>
+                        <input type="button" class="btn_postar" value="Postar">
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <div class="zonaMudancaTopicos">
+               
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="rodape">
+            <h1 id="logoRodape">YourPEL</h1>
+            <div id="icons">
+                <p id="linhaIc">
+                    <a href="https://www.facebook.com/projetoyourpel/" target="_blank"><img id="facebookIcon" src="imagens/Rodape/facebook_icon.png" /></a>
+                    <a href="https://www.instagram.com/yourpel/" target="_blank"><img id="instagramIcon" src="imagens/Rodape/instagram_icon.png" /></a>
+                    <a href="https://www.youtube.com/channel/UCreEERg2Rs-FlDpCPxDyJGw" target="_blank"><img id="youtubeIcon" src="imagens/Rodape/youtube_icon.png" /></a>
+                </p>
+            </div>
+            <div class="zonaGeral menu">
+                <a href="index.html" class="estilo">Home</a>
+                <br>
+                <a href="destaques.html" class="estilo">Destaques </a>
+                <br>
+                <a href="sobre.html" class="estilo">Sobre </a>
+                <br>
+            </div>
+
+            <div class="zonaGeral2 menu">
+                <a href="parceiros.html" class="estilo">Parceiros</a>
+                <br>
+                <a href="divulgacao.html" class="estilo">Divulgação</a>
+                <br>
+                <a href="forum.html" class="estilo">Fórum</a>
+                <br>
+            </div>
+
+            <div class="zonaArtigos menu">
+                <a href="alimentacao.html" class="estilo">Alimentação</a>
+                <br>
+                <a href="sexualidade.html" class="estilo">Sexualidade</a>
+                <br>
+                <a href="substancias.html" class="estilo">Consumos nocivos</a>
+                <br>
+            </div>
+
+            <div class="zonaContactos menu">
+                <p class="styConta" style="color: #1070B0;">Contactos</p>
+                <p class="styConta" style="color: #17A2FF;">+351 243 307 200</p>
+                <p class="styConta" style="color: #17A2FF;">yourpel@essaude.ipsantarem.pt</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="zonaCopyrights">
+            <p class="copyrights">© 2018 IPSANTARÉM — Design by ESGTS</p>
+            <div id="icParceiros">
+                <a href="http://www.poci-compete2020.pt/"><img id="comp" class="estilo parceiros" src="imagens/Rodape/comp2020.png"/></a>
+                <a href="https://www.portugal2020.pt/"><img id="port" class="estilo parceiros" src="imagens/Rodape/port2020.png"/></a>
+                <a href="https://europa.eu/european-union/index_pt"><img id="eu" class="estilo parceiros" src="imagens/Rodape/UE.png"/></a>
+                <a href="https://www.fct.pt/"><img id="fct" class="estilo parceiros" src="imagens/Rodape/fct.png"/></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

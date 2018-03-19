@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook-logo-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Parcerias" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-100.000000, -1896.000000)">
+        <g id="footer" transform="translate(0.000000, 1757.000000)" fill="#17A2FF" fill-rule="nonzero">
+            <g id="Group-7">
+                <g transform="translate(100.000000, 67.000000)">
+                    <g id="Group-5" transform="translate(0.000000, 72.000000)">
+                        <g id="facebook-logo-button">
+                            <path d="M15.88864,0 C7.12768,0 0,7.12768 0,15.88864 C0,24.64896 7.12768,31.77728 15.88864,31.77728 C24.64896,31.77728 31.77728,24.64896 31.77728,15.88864 C31.77728,7.12768 24.65024,0 15.88864,0 Z M19.84,16.448 L17.25504,16.448 C17.25504,20.57792 17.25504,25.66144 17.25504,25.66144 L13.42464,25.66144 C13.42464,25.66144 13.42464,20.6272 13.42464,16.448 L11.60384,16.448 L11.60384,13.19168 L13.42464,13.19168 L13.42464,11.08544 C13.42464,9.57696 14.14144,7.21984 17.29024,7.21984 L20.12864,7.23072 L20.12864,10.39168 C20.12864,10.39168 18.40384,10.39168 18.06848,10.39168 C17.73312,10.39168 17.25632,10.55936 17.25632,11.27872 L17.25632,13.19232 L20.17472,13.19232 L19.84,16.448 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
