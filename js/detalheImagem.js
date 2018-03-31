@@ -71,12 +71,12 @@ function verFotoAtual(url){
 }
 
 function clickFechar() {
+    displayGaleria.style.display = "none";
+    document.body.style.overflow = 'scroll';
     document.body.style.overflow = 'initial';
-	displayGaleria.style.display = "none";
-    displayDetalhe.style.display = "block";
-	iframeInst.src = "#";
-	comentInst.innerHTML = "";
-	fotoAtual = 0;
+    iframeInst.src = "#";
+    comentInst.innerHTML = "";
+    fotoAtual = 0;
 }
 
 function clickMudar(onde){

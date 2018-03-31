@@ -105,17 +105,6 @@ public class HandlerDestaques : IHttpHandler
         {
 
         }
-        //Valores a serem apagados
-        /*for(int i = 0; i < numeroDeArtigosPedidos; i++)
-            listaDeDestaques.Add(
-                serializer.Serialize(
-                    new { tema = "ALIMENTACAO", tipo = "ARTIGO", imagem = "imagens/alimentacao_1.png", titulo = "Titulo Artigo Alimentação", texto = "Isto é texto Alimentação", url = "1" }
-            ));
-
-        json = serializer.Serialize(listaDeDestaques);
-
-        context.Response.ContentType = "plain/text";
-        context.Response.Write(json);*/
     } //getDestaques
 
     /////////////////////////ARTIGO EM DESTAQUE/////////////////////////
@@ -160,20 +149,6 @@ public class HandlerDestaques : IHttpHandler
         {
             Console.WriteLine(ex.Message.ToString());
         }
-        //Valores a serem apagados
-        /*json = serializer.Serialize(
-            new
-            {
-                tema = "ALIMENTACAO",
-                imagem = "imagens/alimentacao_1.png",
-                titulo = "Por favor funcemina",
-                texto = "Se isto funcionar eu mando-me de 2 janelas",
-                url = "1"
-            });
-
-
-        context.Response.ContentType = "plain/text";
-        context.Response.Write(json);*/
     } //getArtigoEmDestaque
 
     /////////////////////////VIDEOS/////////////////////////
@@ -233,18 +208,6 @@ public class HandlerDestaques : IHttpHandler
         {
             Console.WriteLine(ex.Message.ToString());
         }
-        //Valores a serem apagados
-        /*for (int i = 0; i < numeroDeVideosPedidos; i++)
-            listaDeVideos.Add(
-                serializer.Serialize(
-                    new { tema = "ALIMENTACAO", link = @"https://www.youtube.com/watch?v=3M_5oYU-IsU&list=PLJQeCC1As9Poqoy_3R13mI1ReVD-P-bqt", titulo = "Man never hot", texto = "The thing goes skraaaaa" }
-            ));
-
-        json = serializer.Serialize(listaDeVideos);
-
-
-        context.Response.ContentType = "plain/text";
-        context.Response.Write(json);*/
     } //getVideosDestaque
 
 

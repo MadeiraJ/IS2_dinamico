@@ -22,7 +22,7 @@ public class GenericHandler1 : IHttpHandler
     /////////////////////////LISTA DE TOPICOS/////////////////////////
     public void getListaTopicos(HttpContext context)
     {
-            //formato: "12 de Janeiro às 12:45"
+        //formato: "12 de Janeiro às 12:45"
         String json = "";
         var format = "DD de MMMM às HH:MM";
         var listaDeTopicos = new List<String>();
@@ -46,7 +46,7 @@ public class GenericHandler1 : IHttpHandler
             daa.Fill(dtt);
             foreach (DataRow drr in dtt.Rows)
             {
-                DateTime date = (DateTime)dr["DATA_HORA"];  
+                DateTime date = (DateTime)dr["DATA_HORA"];
                 listaDeTopicos.Add(
                     serializer.Serialize(
                         new
@@ -54,23 +54,23 @@ public class GenericHandler1 : IHttpHandler
                             tema = dr["TEMA"],
                             numeroRespostas = drr["nRespostas"],
                             pergunta = dr["TITULO"],
-                            data = date.Day + " de " + date.ToString("MMMM") + " de "+ date.Year + " às "+ date.Hour+":"+date.Minute,
-                            estado = dr["FECHADO"].ToString() == "True" ? "Ativo" : "Fechado",
+                            data = date.Day + " de " + date.ToString("MMMM") + " de " + date.Year, //+ " às "+ date.Hour+":"+date.Minute,
+                estado = dr["FECHADO"].ToString() == "True" ? "Ativo" : "Fechado",
                             id = dr["ID_POST"]
                         }
                 ));
-            }
         }
+    }
 
-        json = serializer.Serialize(listaDeTopicos);
+    json = serializer.Serialize(listaDeTopicos);
         context.Response.ContentType = "plain/text";
         context.Response.Write(json);
     } //getListaTopicos
-    public bool IsReusable
+public bool IsReusable
+{
+    get
     {
-        get
-        {
-            return false;
-        }
+        return false;
     }
+}
 }

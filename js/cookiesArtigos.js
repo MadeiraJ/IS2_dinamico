@@ -81,7 +81,7 @@ function cookieArtigo(){
 
         var tipoDispositivo = checkDevice($(document).width(), $(document).height());
 
-        $.ajax({
+        /*$.ajax({
             url: "/api/handler/Estatistica.ashx?type=1",
             type: "POST",
             data: { tipo: "artigo", id: idCookie, dispositivo: tipoDispositivo, artigo: idArtigo }, //id do artigo como vem da base de dados
@@ -89,7 +89,7 @@ function cookieArtigo(){
             success: function (result) {
                 alert("ok");
             }
-        });
+        });*/
 
         //data actual + 1 hora
         var date = new Date();

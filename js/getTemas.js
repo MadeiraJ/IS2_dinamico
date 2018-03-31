@@ -134,9 +134,11 @@ function addVideo(link, titulo, texto) {
         <div class="bloco-1 postVideo hvr-grow wow fadeIn">
             
             <img class="botaoClickImagem" src="imagens/play_btn.png">
-            <img src="http://img.youtube.com/vi/${link.split('&list=')[0].split('watch?v=')[1]}/maxresdefault.jpg">
+            <img
+            src="http://img.youtube.com/vi/${link.split('&list=')[0].split('watch?v=')[1]}/maxresdefault.jpg"
+            onError="this.onerror=null;this.src='http://img.youtube.com/vi/${link.split('&list=')[0].split('watch?v=')[1]}/hqdefault.jpg'">
 
-            <p class="titulo">${titulo}</p>
+            <p class ="titulo">${titulo}</p>
             <p class="texto">${texto}</p>
         </div>
     </a>`;
@@ -229,6 +231,14 @@ function getVideos(classe, x) {
             } //for
             addClear('.listaVideos');
             numeroVideos += listaDeVideos.length;
+
+            $('.listaVideos img').each(function () {
+                if (thumbnailCerto.complete) {
+                    imageLoaded.call(this);
+                } else {
+                    $(this).one('load', thumbnailCerto);
+                }
+            });
         } //success
     }); //ajax
 } //getVideos
@@ -249,3 +259,13 @@ function emQueColunaDeveriaAdicionar(i) {
     } //else (PC)
     return inserirNaColuna;
 } //emQueColunaDeveriaAdicionar
+
+function thumbnailCerto() {
+    videos = $('.listaVideos img');
+    for (var i = 0; i < videos.length; i++) {
+        natWidth = videos[i].naturalWidth;
+        natHeight = videos[i].naturalHeight;
+        if (natWidth == 120 && natHeight == 90)
+            videos[i].src = videos[i].onError;
+    }
+}

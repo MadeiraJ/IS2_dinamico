@@ -386,7 +386,7 @@
             /*PAGINAS EM GERAL*/
                 .zonaMenu {
                     height: auto;
-                    width: 100%;
+                    width: 100vw;
                     background-color: #062940;
                     background-color: var(--geral-cor1);
                     position: fixed;
@@ -649,7 +649,7 @@
             }
 
         /*TABLET*/
-            @media only screen and (max-width: 1000px) and (min-width: 600px) {
+            @media only screen and (max-width: 900px) and (min-width: 600px){
                 .zonaMenu .topicosMenu {
                     padding-left: 0;
                     font-size: 1.8vw;
@@ -1153,8 +1153,11 @@
                 .paginaTema .post img{
                     width: 100%;
                     opacity: 0.9;
-                    margin: auto;;
+                    margin: auto;
                     padding: 0;
+                    max-height: 20vh;
+                    object-fit: cover;
+                    object-position: center;
                 }
 
                 .paginaTema .post .zonaTexto{
@@ -1578,7 +1581,8 @@
                     border-radius: 6px;
                     background-color: #FFFFFF;
                     box-shadow: 0 2px 6px 2px rgba(170,170,170,0.05);
-                    height: 20%;
+                    height: 35vw;
+                    overflow: hidden;
                 }
                 /*CORES*/
                     .alimentacao #zonaDeVideos .postVideo .titulo{
@@ -1608,6 +1612,8 @@
                     border-top-left-radius: 5px;
                     border-top-right-radius: 5px;
                     width: 100%;
+                    height: 14.4vw;
+                    object-position: center;
                 }
 
                 #zonaDeVideos .postVideo .botaoClickImagem {
@@ -1645,7 +1651,7 @@
                     padding: 5%;
                     padding-top: 0;
                     margin-top: 0;
-                    height: 6vw
+                    /*height: 6vw*/
                 }
 
                 #zonaDeVideos button {
@@ -2047,6 +2053,7 @@
                 /*ZONA VIDEOS*/
                   #zonaDeVideos .postVideo{
                       float: none;
+                      height: auto;
                       width: 100% !important;
                       margin: 0 auto;
                       margin-bottom: 3%;
@@ -2550,11 +2557,11 @@
 
             .hoverDefin{
                 position: relative;
-                display:inline-block;
-                cursor:help;
+                display: inline-block;
+                cursor: help;
             }
 
-            .hoverDefin span{
+            /*.hoverDefin span{
                 visibility: hidden;
                 width: 500px;
                 background-color: #555;
@@ -2571,9 +2578,7 @@
                 margin-left: -250px;
                 opacity: 0;
                 transition: opacity 0.3s;
-
             }
-
             .hoverDefin span::after{
                 content: "";
                 position: absolute;
@@ -2585,11 +2590,10 @@
                 border-color: #555 transparent transparent transparent;
                 transform:rotate(180deg);
                }
-
              .hoverDefin:hover span {
                  visibility: visible;
                  opacity: 1;
-               }
+               }*/
 
                .btn_voltarInicio{
                     position: relative;
@@ -2665,6 +2669,14 @@
                     width: 29%;
                     margin-left: 1%;
                     margin-right: 1%;
+                    height: 35vw;
+                    overflow: hidden;
+                }
+
+                .artigo .outrosArtigos .bloco-1 img {
+                    object-fit: cover;
+                    object-position: center;
+                    height: 20vw;
                 }
 
                 .artigo .outrosArtigos .bloco-1 .zonaTexto{
@@ -2680,7 +2692,7 @@
         /*SMARTPHONE*/
             @media only screen and (max-width: 600px) {
                 .artigo .tituloZonaConteudo {
-                    width: 95%;
+                    width: auto;
                 }
 
                 .artigo .tituloZonaConteudo .detalhe {
@@ -2688,7 +2700,7 @@
                 }
 
                 .artigo .tituloZonaConteudo .detalhe p {
-                    font-size: 3vw;
+                    font-size: 3.5vw;
                     line-height: normal;
                 }
 
@@ -2698,7 +2710,12 @@
                 }
 
                 .artigo .outrosArtigos .bloco-1 {
-                    width: 80%;
+                    width: 70vw;
+                    height: auto;
+                }
+
+                .artigo .outrosArtigos .bloco-1 img {
+                    height: 30vw;
                 }
 
                 .artigo .outrosArtigos .bloco-1 .zonaTexto {
@@ -2706,22 +2723,22 @@
                 }
 
                 .artigo .outrosArtigos .bloco-1 .tituloArtigo {
-                    font-size: 3vw;
+                    font-size: 5vw;
                 }
 
                 .artigo .outrosArtigos .bloco-1 .textoArtigo {
-                    font-size: 2.6vw;
+                    font-size: 4vw;
                 }
 
                 .artigo .conteudo p {
-                    font-size: 3.7vw;
-                    line-height: 4.8vw;
+                    font-size: 5.3vw;
+                    line-height: 7.1vw;
                     width: 90%;
                 }
 
                 .artigo blockquote {
-                    font-size: 4vw;
-                    line-height: 4.8vw;
+                    font-size: 5.3vw;
+                    line-height: 7.1vw;
                     width: 75%;
                     padding: 0;
                 }
@@ -2729,7 +2746,7 @@
 
                 .hoverDefin:hover span {
                     width: auto;
-                    min-width: 50vw;
+                    min-width: 40vw;
                     left: 0;
                     font-size: 2.8vw;
                     line-height: 3.5vw;
@@ -2741,8 +2758,8 @@
                 }
 
                 .btn_voltarInicio {
-                    font-size: 4vw;
-                    padding: 5% 3% 5% 3%;
+                    font-size: 6vw;
+                    padding: 8% 4% 9% 4%;
                     cursor: pointer;
                 }
         }
@@ -2850,8 +2867,10 @@
             }
 
             .noticia .noticiasRelacionadas .bloco-1{
-                text-align: left;
+                overflow: hidden;
+                text-align: center;
                 width: 29%;
+                height: 40vw;
                 margin-left: 1%;
                 margin-right: 1%;
             }
@@ -2870,10 +2889,14 @@
             }
 
             .noticia .noticiasRelacionadas img {
-                width: 100%;
+                width: auto;
+                height: 20vw;
+                object-fit: cover;
+                object-position: center;
             }
 
             .noticia .noticiasRelacionadas .bloco-1 .zonaTexto{
+                text-align: left;
                 padding: 10%;
                 padding-top: 6%;
                 padding-bottom: 6%;
@@ -2907,6 +2930,7 @@
 
                 .noticia .noticiasRelacionadas .bloco-1 {
                     width: 80%;
+                    height: auto;
                 }
 
                 .noticia .noticiasRelacionadas .bloco-1 .zonaTexto {
@@ -2922,14 +2946,14 @@
                 }
 
                 .noticia .conteudo p {
-                    font-size: 4vw;
-                    line-height: 4.8vw;
+                    font-size: 5.3vw;
+                    line-height: 7.1vw;
                     width: 90%;
                 }
 
                 .noticia blockquote {
-                    font-size: 4vw;
-                    line-height: 4.8vw;
+                    font-size: 5.3vw;
+                    line-height: 7.1vw;
                     width: 75%;
                     padding: 0;
                 }
@@ -3218,8 +3242,9 @@
               }
 
               .destaques .texto {
-                  font-size: 4vw;
-                  line-height: normal;
+                    font-size: 4.3vw;
+                    line-height: 6vw;
+                    font-family: "Raleway Medium";
               }
 
               .destaques .zonaVideos h1 {
@@ -3648,6 +3673,29 @@
             }
 
         /*TABLET*/
+            @media only screen and (max-width: 900px) and (min-width: 600px){
+                .parceiros .topo h1 {
+                      font-size: 11vw;
+                      line-height: normal;
+                  }
+
+                  .parceiros .topo p {
+                      width: 80%;
+                      font-size: 5vw;
+                      line-height: normal;
+                  }
+
+                  .parceiros .parcerias {
+                      width: 90%;
+                      text-align: center;
+
+                  }
+
+                  .parcerias .parceiro {
+                      width: 48%;
+                      height: 45vw;
+                  }
+            }
 
         /*SMARTPHONE*/
             @media only screen and (max-width: 600px) {
@@ -3860,9 +3908,27 @@
             }
 
         /*TABLET*/
-            @media only screen and (max-width: 1000px) {
-                #fotoDetalhe .zonaMovimentoImagem .imagem {
-                    height: 40vw;
+            @media only screen and (max-width: 900px) and (min-width: 600px) {
+                .galeria .topo h1 {
+                  font-size: 11vw;
+                  line-height: normal;
+                }
+
+                .galeria .topo p {
+                  width: 80%;
+                  font-size: 5vw;
+                  line-height: normal;
+                }
+
+                .galeria .imagens {
+                  width: 90%;
+                  text-align: center;
+
+                }
+
+                .imagens #ody li{
+                  width: 48% !important;
+                  margin: 1% !important;
                 }
             }
 
@@ -4190,6 +4256,64 @@
               }
             }
 
+        /*TABLET*/
+            /*@media only screen and (max-width: 900px) and (min-width: 600px) {
+                .sobre .topo h1 {
+                    color: var(--geral-cor1);
+                    font-family: "Raleway ExtraBold";
+                    font-size: 4.3vw;
+                    font-weight: 900;
+                    line-height: 5.5vw;
+                    text-align: center;
+                }
+                .sobre .topo p {
+                    width: 80%;
+                    color: var(--geral-cor2);   
+                    font-size: 5vw;
+                    font-weight: bold;
+                    line-height: 6vw;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                .sobre .topo img {
+                    margin: 5%;
+                    width: 70%;
+                }
+                .sobre .zona.descricao {
+                    width: 80%;
+                }
+                .sobre .zona.descricao p {
+                    font-size: 3vw;
+                    line-height: 5vw;
+                }
+                .sobre .zona.descricao .destacar {
+                    font-size: 3vw;
+                    line-height: 4.5vw;
+                }
+                .sobre .zona.descricao li {
+                    font-size: 3vw;
+                    line-height: 5vw;
+                }
+                .sobre .zona.equipa h1 {   
+                    font-size: 5vw;
+                    line-height: 7vw;
+                }
+                  
+                .sobre .equipa .elementos .elemento {
+                    width: 30%;
+                }
+                .sobre .equipa .elementos .elemento img {
+                    width: 100%;
+                }
+                .sobre .equipa .elementos .elemento .nome {
+                    font-size: 3vw;
+                    line-height: 5vw;
+                }
+                .sobre .equipa .elementos .elemento .cargo {
+                    font-size: 2.7vw;
+                    line-height: 4.2vw;
+                }
+            }*/
     /*INICIO ERRO*/
         /*PC*/
             .erro .zonaDeErro {
@@ -4442,8 +4566,7 @@
                 }
 
         /*TABLET*/
-
-            @media only screen and (max-width:1100px) {
+            @media only screen and (max-width: 900px) and (min-width: 600px){
                 /*Forum index*/
                 .div_escolhaTipoTopico{
                     width: 77vw; 
@@ -4776,7 +4899,7 @@
                 padding-bottom: 2%;
                 color: #24D7B4;
                 font-family: "Raleway medium";
-                font-size: 16px;
+                font-size: 1.5vw;
                 font-weight: 800;
             }
 
@@ -5379,8 +5502,7 @@
                 .imagemEventos{
                     width: 35%;
                     height: 34vw;
-                    /*background-image: url(../imagens/evento1.png);*/
-                    background-position: left;
+                    background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
                     float: right;
@@ -5403,7 +5525,7 @@
                     margin-top: 0%;
                     color: #17A2FF;
                     font-family: "Raleway ExtraBold";
-                    font-size: 3.1135vw;
+                    font-size: 3vw;
                     font-weight: 900;
 
                 }
@@ -5427,7 +5549,7 @@
                     margin-top: 10%;
                     color: #0A81D1;
                     font-family: "Raleway ExtraBold";
-                    font-size: 4.5vw;
+                    font-size: 2.8vw;
                     font-weight: 900;
                     margin-bottom: 0;
                 }
@@ -5435,8 +5557,8 @@
                 .descricaoEvento {
                     color: #032133;
                     font-family: "Raleway Bold";
-                    font-size: 2.2vw;
-                    line-height: 3.2vw;
+                    font-size: 1.8vw;
+                    line-height: 2.5vw;
                     font-weight: 700;
                     margin-top: 3%;
                 }
@@ -5688,9 +5810,9 @@
 
                     .imagemEventos {
                         float: none;
-                        width: 50% !important;
-                        height: 60vw !important;
-                        margin-top: 5% !important;
+                        width: 100%;
+                        height: 60vw;
+                        margin-top: 5%;
                         background-size: contain;
                     }
 
@@ -5699,6 +5821,7 @@
                         line-height: normal;
                         margin-left: 1vw  !important;
                         margin-right: 1vw  !important;
+                        display: none;
                     }
 
                     .dataEvento{
@@ -5794,4 +5917,4 @@
                         height: 6vw;
                     }
                 
-            }
+}

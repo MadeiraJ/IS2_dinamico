@@ -33,7 +33,7 @@ $(document).ready(function () {
                 $(".tituloZonaConteudo .detalhe .autor").append(`Palavras de<br>${artigo.autor}`);
                 $(".tituloZonaConteudo .detalhe .data").append(`Publicado em<br>${artigo.data}`);
                 $(".tituloZonaConteudo .imagemCapa").append(`<img src="${artigo.imagemCapa}">`);
-                $(".conteudo").append(artigo.texto);
+                //$(".conteudo").append(artigo.texto);
 
                 montarConteudo(artigo.texto, artigo.tipo)
                 
@@ -116,7 +116,7 @@ function linkXML(tema) {
     return tipoTema;
 }//linkXML
 
-function verificarPalavras(texto) {
+/*function verificarPalavras(texto) {
     for (var i = 0; i < definicoes.length; i++) {
         var procurar = definicoes[i];
         var regEx = new RegExp(procurar, "ig");
@@ -134,4 +134,16 @@ function verificarPalavras(texto) {
     }
     
     $(".conteudo").append(texto);
-}//verificarPalavras
+}*///verificarPalavras
+
+function verificarPalavras(texto) {
+    for (var i = 0; i < definicoes.length; i++) {
+        var procurar = definicoes[i];
+        var expressao = '(?<!<mark class="hoverDefin">)';
+        var regEx = new RegExp(expressao + procurar, "ig");
+        var replacement = `<mark class="hoverDefin" title="${contdef[i]}">` + "$&" + "</mark>";
+        texto = texto.replace(regEx, replacement);
+    }
+
+    $(".conteudo").append(texto);
+} //verificarPalavras

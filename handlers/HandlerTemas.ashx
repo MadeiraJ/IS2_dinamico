@@ -387,12 +387,6 @@ public class TemasHandler : IHttpHandler
             } //switch
 
             //Valores a serem apagados
-            /*for (int i = 0; i < numeroDeVideosPedidos; i++)
-                listaDeVideos.Add(
-                    serializer.Serialize(
-                        new { link = @"https://www.youtube.com/watch?v=0dVa81ecacE&list=PLrDezo9S25Je5OnmKCXCy_GPYUDQtj3dS", titulo = "Man never hot", texto = "The thing goes skraaaaa" }
-                ));*/
-
             json = serializer.Serialize(listaDeVideos);
 
 
@@ -478,16 +472,6 @@ public class TemasHandler : IHttpHandler
                 break;
         } //switch
 
-        //Valores a serem apagados
-        /*listaDeDocumentos.Add(
-            serializer.Serialize(
-                new { link = "https://www.youtube.com/watch?v=3M_5oYU-IsU", nome = "Man never hot" }
-        ));
-
-        listaDeDocumentos.Add(
-            serializer.Serialize(
-                new { link = "https://www.youtube.com/watch?v=3M_5oYU-IsU", nome = "Man kinda cold" }
-        ));*/
         json = serializer.Serialize(listaDeDocumentos);
 
 
@@ -568,16 +552,6 @@ public class TemasHandler : IHttpHandler
                 break;
         } //switch
 
-        //Valores a serem apagados
-        /*listaDeLinks.Add(
-            serializer.Serialize(
-                new { link = "https://www.youtube.com/watch?v=3M_5oYU-IsU", nome = "Man never hot" }
-        ));
-
-        listaDeLinks.Add(
-            serializer.Serialize(
-                new { link = "https://www.youtube.com/watch?v=3M_5oYU-IsU", nome = "Man kinda cold" }
-        ));*/
         json = serializer.Serialize(listaDeLinks);
 
 

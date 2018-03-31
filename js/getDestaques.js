@@ -108,14 +108,14 @@ function addBlocoSabiasQue(i, tema, imagem, texto) {
 function addBlocoVideo(i, tema, link, titulo, texto) {
     var inserirNaColuna = emQueColunaDeveriaAdicionar(i);
 
-    var urlParaVideo = `http://img.youtube.com/vi/${link.split('&list=')[0].split('watch?v=')[1]}/maxresdefault.jpg`;
+    var urlParaVideo = `http://img.youtube.com/vi/${link.split('&list=')[0].split('watch?v=')[1]}`;
     var nomeFicheiroImagem = tema.charAt(0).toUpperCase() + tema.substr(1).toLowerCase();
 
     var bloco =
             `<div onclick="verVideo(this)" name="${link}" style="cursor: pointer;">
                 <div class ="${tema.toLowerCase()} bloco-1 card video wow fadeIn hvr-grow">
                 <img class ="botaoClickImagem" src="imagens/play_btn.png">
-                    <img class ="imgVideo" src="${urlParaVideo}">
+                    <img class ="imgVideo" src="${urlParaVideo}/maxresdefault.jpg" onError="this.onerror=null;this.src='${urlParaVideo}/hqdefault.jpg'">
                     <div class ="textoBloco">
                         <div class ="blocoTopo">
                             <p class ="titulo">VIDEOS</p>
@@ -219,6 +219,14 @@ function getDestaques(x) {
                 }
             } //for
             numeroDestaques += listaDestaques.length;
+
+            $('.listaVideos img').each(function() {
+                if(thumbnailCerto.complete ) {
+                    imageLoaded.call( this );
+                } else {
+                    $(this).one('load', thumbnailCerto);
+                }
+            });
         } //sucess
     }); //ajax
 } //getDestaques
@@ -270,3 +278,13 @@ function emQueColunaDeveriaAdicionar(i) {
     } //else (PC)
     return inserirNaColuna;
 } //emQueColunaDeveriaAdicionar
+
+function thumbnailCerto() {
+    videos = $('.listaVideos img');
+    for (var i = 0; i < videos.length; i++) {
+        natWidth = videos[i].naturalWidth;
+        natHeight = videos[i].naturalHeight;
+        if (natWidth == 120 && natHeight == 90)
+            videos[i].src = videos[i].onError;
+    }
+}
